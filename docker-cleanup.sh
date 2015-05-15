@@ -13,7 +13,6 @@ do
   fi 
   fini=$(docker inspect -f '{{.State.FinishedAt}}' $cid | awk -F. '{print $1}')
   diff=$(expr $(date +"%s") - $(date --date="$fini" +"%s"))    
-  echo $diff
   if [ $diff -gt 86400 ]
   then
      docker rm -v $cid

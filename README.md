@@ -3,7 +3,7 @@
 a tiny all in one shell, which removes:
 
 - containers that not running more than 1 Day ago
-- images that don't belong to any remaining container
+- images that don't belong to any remaining container(so keep the image cache since 1 Day runned)
 
 intend to run as crontab job
 
