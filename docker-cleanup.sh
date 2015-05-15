@@ -3,7 +3,7 @@
 docker ps --no-trunc -a -q | while read cid
 do
   running=$(docker inspect -f '{{.State.Running}}' $cid )
-  if [ "$running"=="true" ]
+  if "$running" == "true"
   then
     continue
   fi 
